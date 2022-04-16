@@ -25,7 +25,15 @@ spring:
                 hbm2ddl:
                     auto: update
 
+    servlet:
+      multipart:
+          max-file-size: 20MB           # 파일 한 개당 최대 사이즈
+          max-request-size: 100MB       # 요청당 최대 파일 크
+
 jwt:
     header: Authorization
     secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
     token-validity-in-seconds: 86400
+
+productImageLocation: C:/shop/product  # 상품 이미지 업로드 경로
+uploadPath: file:///C:/shop/           # 리소스 업로드 경로
